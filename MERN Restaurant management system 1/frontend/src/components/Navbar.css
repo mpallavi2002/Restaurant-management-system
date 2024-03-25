@@ -1,0 +1,26 @@
+/* Navbar.css */
+nav {
+    background-color: #c94d46; 
+    color:whitesmoke ;
+    padding: 10px;
+    
+
+  }
+  
+  
+  .logo {
+      width: 70px; 
+      height: 10x; 
+      margin-right: 10px; 
+   
+    }
+    
+   
+    .nav-left {
+      display: flex;
+      align-items: center;
+      height: 50px;
+     
+    }
+    
+    

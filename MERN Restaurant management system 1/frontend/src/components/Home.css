@@ -1,0 +1,55 @@
+/* Home.css */
+
+.container {
+    text-align: center;
+    font-family: cursive;
+    font-size:32px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .btn-primary,
+  .btn-success {
+    color: #070707;
+  }
+  
+  /* Style for the card boxes */
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  
+  .card p {
+    color: #555;
+  }
+  
+  
+  .card-img-top {
+    width: 70%; 
+    max-height: 300px; 
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+  }
+  
+  /* Additional styling for responsiveness */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  
