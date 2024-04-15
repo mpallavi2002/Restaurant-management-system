@@ -15,7 +15,7 @@ const Register = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      await axios.post("/api/users/register", values);
+      await axios.post("https://restaurant-management-system-5hbx.vercel.app/api/users/register", values);
       message.success("Registration Successful");
       dispatch({ type: "HIDE_LOADING" });
       navigate("/login");

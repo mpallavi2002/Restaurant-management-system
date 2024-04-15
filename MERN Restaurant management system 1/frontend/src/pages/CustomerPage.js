@@ -11,7 +11,7 @@ const CutomerPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const { data } = await axios.get("/api/bills/get-bills");
+      const { data } = await axios.get("https://restaurant-management-system-5hbx.vercel.app/api/bills/get-bills");
       setBillsData(data);
       dispatch({ type: "HIDE_LOADING" });
       console.log(data);
@@ -28,7 +28,7 @@ const CutomerPage = () => {
 
   const columns = [
     { title: "ID", dataIndex: "_id" },
-    { title: "Cutomer Name", dataIndex: "customerName"},
+    { title: "Cutomer Name", dataIndex: "customerName" },
     { title: "Contact No", dataIndex: "customerNumber" },
     { title: "Total Amount", dataIndex: "totalAmount" },
   ];

@@ -15,7 +15,7 @@ const ItemPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const { data } = await axios.get("/api/items/get-item");
+      const { data } = await axios.get("https://restaurant-management-system-5hbx.vercel.app/api/items/get-item");
       setItemsData(data);
       dispatch({ type: "HIDE_LOADING" });
       console.log(data);
@@ -36,7 +36,7 @@ const ItemPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      await axios.post("/api/items/delete-item", { itemId: record._id });
+      await axios.post("https://restaurant-management-system-5hbx.vercel.app/api/items/delete-item", { itemId: record._id });
       message.success("Item Deleted Succesfully");
       getAllItems();
       setPopupModal(false);
@@ -90,7 +90,7 @@ const ItemPage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        await axios.post("/api/items/add-item", value);
+        await axios.post("https://restaurant-management-system-5hbx.vercel.app/api/items/add-item", value);
         message.success("Item Added Succesfully");
         getAllItems();
         setPopupModal(false);
@@ -105,7 +105,7 @@ const ItemPage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        await axios.put("/api/items/edit-item", {
+        await axios.put("https://restaurant-management-system-5hbx.vercel.app/api/items/edit-item", {
           ...value,
           itemId: editItem._id,
         });

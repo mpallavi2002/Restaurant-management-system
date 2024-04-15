@@ -11,11 +11,11 @@ const Login = () => {
   const navigate = useNavigate();
   //from submit
   const submitHandler = async (values) => {
-      try {
-        dispatch({
-          type: "SHOW_LOADING",
-        });
-      const { data } = await axios.post("/api/users/login", values);
+    try {
+      dispatch({
+        type: "SHOW_LOADING",
+      });
+      const { data } = await axios.post("https://restaurant-management-system-5hbx.vercel.app/api/users/login", values);
       dispatch({ type: "HIDE_LOADING" });
       message.success("login success");
       localStorage.setItem(
@@ -44,7 +44,7 @@ const Login = () => {
             <Input type="email" />
           </Form.Item>
           <Form.Item label="Password" name="password">
-          <Input.Password />
+            <Input.Password />
           </Form.Item>
           <div className="d-flex justify-content-between">
             <Link to="/register">Not a User? Click Here to Register</Link>

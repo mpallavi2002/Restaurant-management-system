@@ -19,7 +19,7 @@ const BillsPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const { data } = await axios.get("/api/bills/get-bills");
+      const { data } = await axios.get("https://restaurant-management-system-5hbx.vercel.app/api/bills/get-bills");
       setBillsData(data);
       dispatch({ type: "HIDE_LOADING" });
       console.log(data);
@@ -91,7 +91,7 @@ const BillsPage = () => {
             <center id="top">
               <div className="info">
                 <h2>Restaurant Management</h2>
-                <p> Contact : +1234567891 <br/> Toronto, Canada </p>
+                <p> Contact : +1234567891 <br /> Toronto, Canada </p>
               </div>
               {/*End Info*/}
             </center>

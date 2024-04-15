@@ -42,7 +42,7 @@ const Homepage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const { data } = await axios.get("/api/items/get-item");
+        const { data } = await axios.get("https://restaurant-management-system-5hbx.vercel.app/api/items/get-item");
         setItemsData(data);
         dispatch({ type: "HIDE_LOADING" });
         console.log(data);
@@ -52,16 +52,15 @@ const Homepage = () => {
     };
     getAllItems();
   }, [dispatch]);
-  
+
   return (
     <DefaultLayout>
-            <div className="d-flex">
+      <div className="d-flex">
         {categories.map((category) => (
           <div
             key={category.name}
-            className={`d-flex category ${
-              selecedCategory === category.name && "category-active"
-            }`}
+            className={`d-flex category ${selecedCategory === category.name && "category-active"
+              }`}
             onClick={() => setSelecedCategory(category.name)}
           >
             <h4>{category.name}</h4>
