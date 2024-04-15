@@ -1,0 +1,93 @@
+/* DefaultLayout.css */
+
+/* Logo */
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: linear-gradient(135deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400);
+  background-size: 1800% 1800%;
+  animation: rainbow 18s ease infinite;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: rgb(138, 81, 81);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Content */
+.content {
+  margin: 24px 16px;
+  padding: 24px;
+  min-height: 650px;
+  background: #9ed3c2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sider */
+.ant-layout-has-sider {
+  padding: 5px !important;
+}
+
+.ant-layout.ant-layout-has-sider {
+  min-height: 650px;
+  height: auto;
+}
+
+.ant-layout-sider {
+  border-radius: 10px !important;
+  padding-top: 10px !important;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Anticon */
+.anticon svg {
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+/* Cart Item */
+.cart-item {
+  padding-left: 20px;
+  padding-right: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-item p {
+  font-size: 1rem;
+  margin-top: 13px;
+  font-weight: 700;
+  margin-left: 10px;
+}
