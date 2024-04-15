@@ -23,15 +23,17 @@ app.use(morgan('dev'));
 app.use('/api/items', itemRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/bills", billsRoutes);
-
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome Restaurant Management" });
+});
 // static files
-app.use(express.static(path.join(__dirname,'./client/build')))
+app.use(express.static(path.join(__dirname, './client/build')))
 
-app.get('*', function(req, res){
+app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, './client/build/index.html'))
 })
 
-const PORT = process.env.PORT ||4000;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
